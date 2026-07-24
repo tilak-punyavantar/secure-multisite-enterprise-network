@@ -186,7 +186,43 @@ show ip nat statistics
 show ip ssh
 show port-security
 ```
+### Verification Evidence
 
+#### OSPF Dynamic Routing
+
+OSPF Area 0 adjacency between R1-EDGE and R3-BRANCH reached the FULL state, with headquarters networks dynamically learned by the branch router.
+
+![OSPF Verification](verification-screenshots/ospf-verification.png)
+
+#### NAT/PAT Translation
+
+R1-EDGE translates private enterprise addresses to the external interface address using PAT overload.
+
+![NAT PAT Verification](verification-screenshots/nat-pat-verification.png)
+
+#### Extended ACL Enforcement
+
+Extended ACLs enforce departmental access policies while permitting required enterprise services.
+
+![ACL Verification](verification-screenshots/acl-verification.png)
+
+#### SSH v2 Remote Administration
+
+R1-EDGE supports encrypted remote administration through SSH version 2 with local authentication.
+
+![SSH Verification](verification-screenshots/ssh-verification.png)
+
+#### Switch Port Security
+
+Access ports use sticky MAC learning, a maximum of one secure MAC address, and restrict-mode violation handling.
+
+![Port Security Verification](verification-screenshots/port-security-verification.png)
+
+#### Enterprise Web Portal
+
+The internal server hosts a custom enterprise operations portal accessible through internal DNS at `www.company.local`.
+
+![Enterprise Portal](verification-screenshots/enterprise-portal.png)
 ---
 
 ## Project Files
